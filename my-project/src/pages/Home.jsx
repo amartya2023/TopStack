@@ -24,6 +24,36 @@ const Home = () => {
             description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
         }
     ]
+    const serviceData = [
+        {
+            title: 'CCTV Maintenance (IP Camera & Normal Camera)',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Network Configuration',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Router Configuration',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Desktop Repairing',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Laptop Repairing',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Printer Repairing',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        },
+        {
+            title: 'Server Maintenance',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+        }
+    ]
   return (
     
     <>
@@ -81,62 +111,20 @@ const Home = () => {
                 <h2 className='text-4xl text-black font-bold text-center font-medium'>Our Services</h2>
 
                 <div className='grid grid-cols-3 grid-rows-3 h-full w-full gap-10'>
+
+                    {
+                        serviceData.map((data,index)=>{
+                            return(
+                                <div key={index} className='min-h-[100px] px-3 py-3 rounded-3xl shadow-2xl'>
+                                    <h2 className='text-xl font-medium'>{data.title}</h2>
+                                    <p className='py-3 text-xs'>
+                                        {data.description}
+                                    </p>
+                                </div>
+                            )
+                        })
+                    }
                     
-                    <div className='min-h-[100px] px-3 py-3 rounded-3xl shadow-2xl'>
-                    <h2 className='text-xl font-medium'>CCTV Maintenance(IP Camera & Normal Camera)</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Network Configuration</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Router Configuration</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Desktop Repairing</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Laptop Repairing</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Printer Repairing</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    </div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-2 '></div>
-
-                    <div className='min-h-[100px] rounded-3xl px-3 py-3 shadow-2xl'>
-                    <h2 className='text-xl font-medium'>Server Maintenance</h2>
-                    <p className='py-3 text-xs'>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-                    </div>
 
                 </div>
 
