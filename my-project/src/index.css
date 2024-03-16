@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    scroll-behavior: smooth;
+}
+
 .custom-shadow{
     box-shadow: 0 0 0 0 #F9C869;
     transition: 0.3s ease-in-out all;
@@ -13,6 +17,6 @@
 }
 
 .service-shadow{
-    box-shadow: 1px 1px 1px 1px rgba(208, 219, 211);
+    box-shadow: 0 0 15px 0 rgb(191, 201, 194);
     transition: 0.3s ease-in-out all;
 }
