@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/logo.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const routes = [
     { name: "Home", path: "#home" },
@@ -24,7 +26,7 @@ const Header = () => {
           </p>
         </div>
 
-        <menu className="bg-black flex gap-3 rounded-full px-1 py-1">
+        <menu className="bg-black hidden md:flex gap-3 rounded-full px-1 py-1">
           {routes.map((route, index) => {
             return (
               <a
@@ -41,7 +43,39 @@ const Header = () => {
             );
           })}
         </menu>
+
+        <menu onClick={()=> {
+          setIsOpen(!isOpen)
+        }} className="flex flex-col md:hidden items-center justify-center gap-1.5 bg-black aspect-square p-4 rounded-full">
+
+          <div className="border-2 rounded-full border-yellow-400 w-8" />
+          <div className="border-2 rounded-full border-yellow-400 w-8" />
+          <div className="border-2 rounded-full border-yellow-400 w-8" />
+
+        </menu>
       </header>
+
+      <nav className="bg-black flex flex-col overflow-hidden md:hidden">
+
+        {
+          routes.map((route, index)=>{
+            return(
+              <a
+                className={
+                  location.hash === route.path
+                    ? "text-lg bg-[#F9C869] text-black px-8 py-1 rounded-full font-medium transition-all duration-300"
+                    : "text-lg text-[#F9C869] px-8 py-1 font-medium transition-all duration-300"
+                }
+                href={route.path}
+                key={index}
+              >
+                {route.name}
+              </a>
+            )
+          })
+        }
+
+      </nav>
     </>
   );
 };

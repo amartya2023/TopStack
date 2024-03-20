@@ -3,11 +3,11 @@ import Hero from '../assets/Heros.svg'
 import PCparts from '../assets/subHero/pcparts.png'
 import NetEuip from '../assets/subHero/netequip.png'
 import Cctv from '../assets/subHero/cctv.png'
-import Arrow from '../assets/Arrow.svg'
 import PlaceIcon from '@mui/icons-material/Place';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EastIcon from '@mui/icons-material/East';
+import Rating from '@mui/material/Rating';
 
 const Home = () => {
 
@@ -72,15 +72,55 @@ const Home = () => {
             title: '+91 0000000000'
         }
     ]
+
+    const review = [
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:3,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        },
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:3,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        },
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:3,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        },
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:2,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        },
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:4,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        },
+        {
+            title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
+            rateVal:3,
+            customer: 'John Doe',
+            date: '20 march 2024'
+        }
+    ]
+
   return (
     
     <>
-        <main>
+        
 
             {/* Heroes section */}
             <section id='home' className='flex items-center justify-center h-screen px-20'>
                 <div className='w-1/2 flex flex-col gap-10'>
-                    <h1 className='text-5xl font-medium'>Techtester Infotech</h1>
+                    <h1 className='text-6xl font-medium'>Techtester Infotech</h1>
                     <p>
                         Welcome to <strong>Techtester Infotech</strong>, your IT heroes! We specialize in CCTV maintenance (IP & normal cameras), network and router configuration, desktop and laptop repairs, printer servicing, and server maintenance. Count on us for swift, reliable solutions to keep your technology running seamlessly. 
                     </p>
@@ -99,14 +139,14 @@ const Home = () => {
 
                 <h2 className='text-2xl text-[#F9C869] font-medium'>What we sell ?</h2>
 
-                <div className='grid grid-cols-3 h-full w-full gap-5'>
+                <div className='grid grid-cols-3 h-full w-full gap-10'>
 
                     {
                         subHeroData.map((data,index)=>{
                             return(
                                 <div key={index} className='w-full h-full flex flex-col justify-around p-5 bg-black custom-shadow rounded-xl'>
                                     <img src={data.img} className='w-full object-contain' />
-                                    <h2 className='text-xl text-[#F9C869] font-medium'>{data.title}</h2>
+                                    <h2 className='text-2xl text-[#F9C869] font-medium'>{data.title}</h2>
                                     <p className='text-white'>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita fugit modi quos ea omnis illum quod explicabo vel dolores possimus, delectus a nam sapiente incidunt tempora unde facilis autem?
                                     </p>
@@ -136,7 +176,7 @@ const Home = () => {
                     {
                         serviceData.map((data,index)=>{
                             return(
-                                <div key={index} className='min-h-[100px] px-5 py-5 rounded-3xl service-shadow w-1/4 mx-auto'>
+                                <div key={index} className='min-h-[100px] px-5 py-5 rounded-xl service-shadow w-1/4 mx-auto'>
                                     <h2 className='text-xl font-medium'>{data.title}</h2>
                                     <p className='py-3 text-xs'>
                                         {data.description}
@@ -148,6 +188,38 @@ const Home = () => {
                     
 
                 </div>
+
+            </section>
+
+            {/* review section */}
+            <section className='h-full py-10 flex flex-col gap-10'>
+
+                <h2 className='text-2xl font-medium px-32'>Hear from others</h2>
+
+                <div className='flex flex-wrap h-full w-full px-28 gap-10'>
+
+                    {
+                        review.map((data, index)=> {
+                            return(
+                                <div key={index} className='min-h-[100px] px-5 py-5 rounded-xl w-1/4 service-shadow mx-auto'>
+                                    <h4 className='text-sm font-normal'>{data.title}</h4>
+                                    <Rating name="read only" value={data.rateVal} readOnly className='pt-6'/>
+                                    <div className='text-gray-500 grid grid-cols-2'>
+                                        <p className='text-left'>{data.customer}</p>
+                                        <p className='text-right'>{data.date}</p>
+                                    </div> 
+                                </div>
+                            )
+                        })
+                    }
+
+                </div>
+                <div className='mx-auto text-center mt-6  w-[30rem] font-semibold'>
+                    <p>"Lorem Ipsum is simply summy text of the printing and typetesting industry."</p>
+                    <hr className='w-48 mt-2 mx-auto bg-gray-400'/>
+                    <p className='text-gray-400 mb-5'>John Deo,CEO</p>
+                </div>
+
 
             </section>
 
@@ -192,7 +264,7 @@ const Home = () => {
             </section>
 
 
-        </main>
+        
     </>
   )
 }
