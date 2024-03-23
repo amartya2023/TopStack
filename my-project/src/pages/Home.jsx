@@ -283,10 +283,10 @@ const Home = () => {
           </div>
         </div>
 
-        {/* contact form */}
-        <form className="flex flex-col gap-2 w-[30%]">
+        {/* Contact Form */}
+        <form className="flex flex-col gap-2 w-full lg:w-[30%]">
           <p className="text-white text-lg mb-5">
-            Submit your contact number our team will contact you soon
+            Submit your contact details our team will contact you soon.
           </p>
 
           <input
