@@ -55,7 +55,7 @@ const Header = () => {
         className={
           scrolling
             ? "flex justify-between fixed w-screen z-10 top-0 items-center px-5 md:px-10 lg:px-20 py-5 bg-white duration-500"
-            : "flex justify-between fixed w-screen z-10 top-0 items-center px-5 md:px-10 lg:px-20 py-5 bg-white -translate-y-32 duration-500"
+            : "flex justify-between fixed w-screen z-10 top-0 items-center px-5 md:px-10 lg:px-20 py-5 bg-white lg:-translate-y-32 duration-500"
         }
       >
         <div className="flex gap-4 items-center">

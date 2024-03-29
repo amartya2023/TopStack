@@ -308,6 +308,8 @@ const Home = () => {
             placeholder="Contact No."
           />
 
+          <textarea className="outline-none border-none px-4 py-3 bg-[#D9D9D9] font-medium rounded-xl text-lg" rows={4} placeholder='Write your query here' />
+
           <button className="bg-[#F9C869] text-black text-lg rounded-xl font-medium w-[40%] py-2">
             Submit
           </button>
