@@ -2,7 +2,10 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
+    
+    <nav className='h-screen px-5 bg-white'>
+
+    </nav>
   )
 }
 
