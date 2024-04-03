@@ -4,13 +4,14 @@ import SideBar from './SideBar'
 
 const AdminMainLayout = ({Page}) => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex'>
+
+        
+        <SideBar/>
+
+        <div className='w-full flex flex-col'>
 
         <Header/>
-
-        <div className='w-full flex'>
-
-            <SideBar/>
 
             <Page/>
 

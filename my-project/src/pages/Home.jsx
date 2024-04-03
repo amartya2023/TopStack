@@ -211,7 +211,7 @@ const Home = () => {
             return (
               <div
                 key={index}
-                className="service-shadow rounded-xl w-full p-10"
+                className="card-shadow rounded-xl w-full p-10"
               >
                 <h4 className="font-medium text-xl mb-2 md:mb-5">
                   {data.title}
@@ -235,7 +235,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
           {review.map((data, index) => {
             return (
-              <div key={index} className="service-shadow p-5 rounded-xl w-full">
+              <div key={index} className="card-shadow p-5 rounded-xl w-full">
                 <h4 className="font-medium">{data.title}</h4>
                 <Rating
                   name="read only"

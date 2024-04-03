@@ -4,6 +4,8 @@ import Home from "./pages/Home"
 import Footer from "./layouts/Footer"
 import TakeReview from "./pages/TakeReview"
 import Login from "./pages/admin/Login"
+import AdminMainLayout from "./layouts/admin/AdminMainLayout"
+import AdminHome from './pages/admin/Home'
 
 function App() {
 
@@ -24,9 +26,9 @@ function App() {
         <Route path="/add-review/:agentID" element={<TakeReview />} />
         <Route path="/admin/login" element={<Login />} />
 
-        {/* <Route>
-
-        </Route> */}
+        <Route>
+          <Route path="/admin/home" element={<AdminMainLayout Page={AdminHome} />} />
+        </Route>
       </Routes>
       
       {
