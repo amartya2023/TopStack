@@ -15,7 +15,7 @@ const SideBar = () => {
       icon: HomeOutlinedIcon
     },
     {
-      name: 'Contact Submissions',
+      name: 'Contact',
       path: '/admin/Contact-Submissions',
       icon: ContactSupportOutlinedIcon
     },
@@ -44,9 +44,15 @@ const SideBar = () => {
 
         {
           navRoutes.map((route, index) => (
-            <NavLink to={route.path} className={({ isActive }) => (isActive ? "text-white rounded-lg bg-black p-3 duration-300 flex" : "text-slate-500 bg-white hover:bg-slate-200 rounded-lg duration-300 p-3 flex")}>
+            <NavLink to={route.path} className={({ isActive }) => (isActive ? "text-white rounded-lg bg-black p-3 duration-300 flex items-center gap-2" : "text-slate-500 bg-white hover:bg-slate-200 rounded-lg duration-300 p-3 flex items-center gap-2")}>
               {
                 <route.icon fontSize='medium' />
+              }
+
+              {
+                <p>
+                  {route.name}
+                </p>
               }
               
             </NavLink>
