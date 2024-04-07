@@ -8,6 +8,9 @@ import AdminMainLayout from "./layouts/admin/AdminMainLayout"
 import AdminHome from './pages/admin/Home'
 import AdminNotFound from "./pages/admin/AdminNotFound"
 import Items from "./pages/admin/Items"
+import Services from "./pages/admin/Services"
+import ContactSubmission from "./pages/admin/ContactSubmission"
+import Reviews from "./pages/admin/Reviews"
 
 function App() {
 
@@ -31,7 +34,13 @@ function App() {
         <Route>
           <Route path="/admin/home" element={<AdminMainLayout Page={AdminHome} />} />
 
+          <Route path="/admin/Contact-Submissions" element={<AdminMainLayout Page={ContactSubmission} />} />
+
           <Route path="/admin/items" element={<AdminMainLayout Page={Items} />} />
+
+          <Route path="/admin/Services" element={<AdminMainLayout Page={Services} />} />
+
+          <Route path="/admin/Reviews" element={<AdminMainLayout Page={Reviews} />} />
 
           <Route path="/admin/*" element={<AdminMainLayout Page={AdminNotFound} />} />
 
