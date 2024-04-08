@@ -53,29 +53,32 @@ const Items = () => {
 
                     <form className='p-10 bg-white flex flex-col gap-5 rounded-xl shadow-xl w-[30%]'>
 
-                        <label htmlFor="img-input" className='p-10 rounded-lg w-full text-slate-500 duration-300 hover:text-slate-800 hover:border-slate-500 border border-slate-300'>
-
                     {
                         imgURL && imgInput ?
-                        <>
+
+                        <div className='p-10 rounded-lg w-full text-slate-500 duration-300 hover:text-slate-800 hover:border-slate-500 border border-slate-300'>
+
                             <img src={imgURL} alt="" />
-                            <button type='button' onClick={e=>{
-                                setImgInput(null)
-                                setImgURL('')
-                            }} className='bg-red-400 text-white w-full py-2'>
-                                Remove Image
-                            </button>
-                        </>
-                      : <>
-                            <input onChange={handleImgInput} id='img-input' type='file' accept='img/*' className='hidden' />
-                            <div className='flex flex-col items-center justify-center gap-3 relative select-none'>
-                                <CloudUploadIcon /> Click to Upload Image
-                            </div>
-                        </>
-                    }        
+                                <button type='button' onClick={e=>{
+                                    setImgInput(null)
+                                    setImgURL('')
+                                }} className='bg-red-400 text-white w-full py-2'>
+                                    Remove Image
+                                </button>
+
+                        </div>
+                        : 
+                        <label htmlFor="img-input" className='p-10 rounded-lg w-full text-slate-500 duration-300 hover:text-slate-800 hover:border-slate-500 border border-slate-300'>
 
                             
+                                <input onChange={handleImgInput} id='img-input' type='file' accept='img/*' className='hidden' />
+                                <div className='flex flex-col items-center justify-center gap-3 relative select-none'>
+                                    <CloudUploadIcon /> Click to Upload Image
+                                </div>
+                            
+
                         </label>
+                    }        
 
                         <input name='title' onChange={onChange} value={formInput.title} type="text" className='w-full outline outline-[1.5px] outline-slate-300 focus:outline-slate-500 duration-300 rounded-lg py-2 px-4' placeholder='Enter Item Title' />
 
